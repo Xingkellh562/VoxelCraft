@@ -1,0 +1,8 @@
+# Visual Studio 缓存和临时文件
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.tmp
