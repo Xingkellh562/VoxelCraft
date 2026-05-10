@@ -228,6 +228,11 @@ namespace VoxelCraft
                 player.axisTransform.Forward(player.dir, 0.1f) * 100 +
                 player.axisTransform.Right(player.dir, 0.1f) * 100 +
                 player.axisTransform.Up(0.1f) * 100;
+
+            if (player.axisTransform.useGravity && !player.axisTransform.PressSpace && !player.axisTransform.PressShift)
+                player.body.acceleratedVelocity = new Vector3(0, -60, 0);
+            else
+                player.body.acceleratedVelocity = Vector3.Zero;
             Vector3 pos = player.position;
             player.position = player.body.PhysicUpdate(pos, (float)UpdateTime, player.box, this);
 
@@ -313,7 +318,7 @@ namespace VoxelCraft
         public static void GenChunk(WorldBlockData world, Vector3 playerPos,int chunkSize,int r)
         {
             List<Vector3i> l1 = GetPointsInSphericalShell(-1,r);
-            List<Vector3i> l2 = GetPointsInSphericalShell(r+1, r+2);
+            List<Vector3i> l2 = GetPointsInSphericalShell(r+1, r+3);
             for (int i = 0; i < l1.Count; i++)
             {
                 l1[i] += GetPlayerChunks(playerPos, chunkSize);

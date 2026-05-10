@@ -15,6 +15,7 @@ namespace VoxelCraft
         private float rightAxis = 0;
         private float jumpAxis = 0;
 
+
         public bool PressW = false;
         public bool PressS = false;
 
@@ -29,6 +30,8 @@ namespace VoxelCraft
 
         public float pastMouseX = 400;
         public float pastMouseY = 300;
+
+        public bool useGravity = false;
 
         public const float moveScale = 0.1f;
         public AxisTransform() { }

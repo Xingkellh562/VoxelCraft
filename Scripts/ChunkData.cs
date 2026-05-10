@@ -52,7 +52,7 @@ namespace VoxelCraft
                 -Vector3i.UnitX,
                 -Vector3i.UnitZ,
             };
-           
+           /*
             foreach (Vector3i v3 in vList)
             {
                 if (!world.FindChunk(chunkPos.X+v3.X, chunkPos.Y, chunkPos.Z+ v3.Z))
@@ -67,6 +67,7 @@ namespace VoxelCraft
                     }
                 }
             }
+           */
             // 遍历区块内所有局部坐标
             for (int x = 1; x <= size; x++)
             {

@@ -121,6 +121,7 @@ namespace VoxelCraft
             if (e.Key == Keys.S) world.player.axisTransform.PressS = true;
             if (e.Key == Keys.A) world.player.axisTransform.PressA = true;
             if (e.Key == Keys.D) world.player.axisTransform.PressD = true;
+            if (e.Key == Keys.G) world.player.axisTransform.useGravity = !world.player.axisTransform.useGravity;
             if (e.Key == Keys.Space) world.player.axisTransform.PressSpace = true;
             if (e.Key == Keys.LeftShift) world.player.axisTransform.PressShift = true;
             if (e.Key == Keys.Escape) this.Close();
@@ -133,6 +134,7 @@ namespace VoxelCraft
             if (e.Key == Keys.S) world.player.axisTransform.PressS = false;
             if (e.Key == Keys.A) world.player.axisTransform.PressA = false;
             if (e.Key == Keys.D) world.player.axisTransform.PressD = false;
+            
             if (e.Key == Keys.Space) world.player.axisTransform.PressSpace = false;
             if (e.Key == Keys.LeftShift) world.player.axisTransform.PressShift = false;
         }

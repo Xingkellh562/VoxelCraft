@@ -13,7 +13,7 @@ namespace VoxelCraft
         public Vector3 velocity = new Vector3();
         public Vector3 acceleratedVelocity = new Vector3(0,0,0);
 
-        public float damp = 0.1f;
+        public float damp = 0.05f;
         public PhysicMgr() { }
 
         public Vector3 PhysicUpdate(Vector3 pos, float updateTime, BoxAABB box, WorldBlockData world)
